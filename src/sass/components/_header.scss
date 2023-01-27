@@ -1,0 +1,42 @@
+.header {
+  margin: 0 100px 0 100px;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  &__logo {
+    width: 210px;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  a {
+    margin-left: 60px;
+    text-decoration: none;
+    color: $color-primary;
+  }
+  a:hover {
+    font-weight: 800;
+    scale: 1.05;
+    border-bottom: 2px solid $color-primary;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    margin: 0 20px 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 100px;
+    &__logo {
+      width: 150px;
+    }
+    a {
+      margin-left: 10px;
+    }
+  }
+}

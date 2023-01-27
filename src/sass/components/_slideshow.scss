@@ -1,0 +1,56 @@
+.slideshow {
+  position: relative;
+  height: 415px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    mix-blend-mode: normal;
+    border-radius: 25px;
+  }
+  &__index {
+    position: absolute;
+    bottom: 20px;
+    font-size: 18px;
+    color: $color-secondary;
+  }
+  &__back {
+    position: absolute;
+    left: 0;
+    width: 8%;
+    height: 100%;
+    border-radius: 25px;
+  }
+  &__back:hover {
+    box-shadow: -5px 0px 5px rgb(100, 100, 100);
+  }
+  &__forward {
+    position: absolute;
+    right: 0;
+    width: 8%;
+    height: 100%;
+    border-radius: 25px;
+  }
+  &__forward:hover {
+    box-shadow: 5px 0px 5px rgb(100, 100, 100);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slideshow {
+    height: 255px;
+    &__image {
+      border-radius: 10px;
+    }
+    &__back {
+      width: 50px;
+      border-radius: 10px;
+    }
+    &__forward {
+      width: 50px;
+      border-radius: 10px;
+    }
+  }
+}

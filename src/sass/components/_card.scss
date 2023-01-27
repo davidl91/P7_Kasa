@@ -1,0 +1,65 @@
+.card {
+  position: relative;
+  margin: 20px;
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  &__image {
+    z-index: 5;
+    width: 340px;
+    min-height: 340px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  &__background {
+    position: absolute;
+    z-index: 10;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    display: flex;
+  }
+  &__text {
+    position: absolute;
+    bottom: 0;
+    z-index: 15;
+    margin: 20px;
+    display: flex;
+    align-items: flex-end;
+    min-height: 50px;
+    color: $color-secondary;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    margin: 10px 0 10px 0;
+    height: 255px;
+    &__image {
+      min-height: 255px;
+    }
+    &__background {
+      height: 255px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin: 0 0 20px 0;
+    width: 100%;
+    &__image {
+      width: 100%;
+    }
+    &__background {
+      width: 100%;
+    }
+  }
+}

@@ -36,9 +36,11 @@ function Slideshow({image}) {
         src={image[imgIndex]}
         alt="Illustration du logement"
       />
-      <span className="slideshow__index">
-        {imgIndex + 1}/{image.length}
-      </span>
+      {image.length > 1 && (
+        <span className="slideshow__index">
+          {imgIndex + 1}/{image.length}
+        </span>
+      )}
       {image.length > 1 && (
         <img
           className="slideshow__forward"

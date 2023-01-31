@@ -430,6 +430,7 @@ a {
   border-radius: 25px;
 }
 .slideshow__back:hover {
+  width: 9%;
   box-shadow: -5px 0px 5px rgb(100, 100, 100);
 }
 .slideshow__forward {
@@ -440,6 +441,7 @@ a {
   border-radius: 25px;
 }
 .slideshow__forward:hover {
+  width: 9%;
   box-shadow: 5px 0px 5px rgb(100, 100, 100);
 }
 

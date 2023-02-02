@@ -1,10 +1,7 @@
 .location {
-  margin: 0 100px 0 100px;
-  &__section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   &__title {
     font-size: 36px;
     color: $color-primary;
@@ -21,18 +18,14 @@
     flex-direction: column;
     align-items: flex-end;
   }
-  &__toggles {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-  &__description {
-    width: 45%;
-  }
-  &__equipements {
-    width: 45%;
-  }
+}
+.toggles {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   .collapse {
+    width: 45%;
     &__title {
       font-size: 18px;
     }
@@ -42,33 +35,22 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .location {
-    margin: 0 20px 0 20px;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .location {
-    &__section {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+    flex-direction: column;
+    align-items: flex-start;
     &__info {
       width: 100%;
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: center;
     }
-    &__toggles {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-    }
-    &__description {
-      width: 100%;
-    }
-    &__equipements {
+  }
+  .toggles {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    .collapse {
       width: 100%;
     }
   }

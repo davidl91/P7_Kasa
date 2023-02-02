@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+.container {
+  margin: 0 100px 0 100px;
+}
+
+@media screen and (max-width: 1050px) {
+  .container {
+    margin: 0 20px 0 20px;
+  }
+}
 body {
   font-family: "Montserrat";
   font-style: normal;
@@ -38,31 +47,22 @@ a {
   line-height: 142.6%;
 }
 
-.about {
-  margin: 0 100px 0 100px;
+.collapses {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.about__banner {
-  width: 100%;
-}
-.about__collapses {
+.collapses .collapse {
   width: 85%;
-  display: flex;
-  flex-direction: column;
 }
 
-@media screen and (max-width: 1024px) {
-  .about {
-    margin: 0 20px 0 20px;
-  }
-  .about__collapses {
+@media screen and (max-width: 1050px) {
+  .collapses .collapse {
     width: 100%;
   }
 }
 .error404 {
-  margin: 0 100px 0 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +84,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .error404 {
-    margin: 0 40px 0 40px;
+    margin: 0 20px 0 20px;
   }
   .error404__title {
     font-size: 192px;
@@ -93,10 +93,7 @@ a {
     margin: 60px 0 60px 0;
   }
 }
-.home {
-  margin: 0 100px 0 100px;
-}
-.home__cards {
+.cards {
   padding: 25px;
   background: #f7f7f7;
   border-radius: 25px;
@@ -106,27 +103,24 @@ a {
   flex-wrap: wrap;
   text-decoration: none;
 }
-.home__cards a {
+.cards a {
   text-decoration: none;
 }
-.home__cards article:hover {
+.cards a:hover {
   scale: 1.05;
 }
 
 @media screen and (max-width: 1024px) {
-  .home {
-    margin: 0 20px 0 20px;
-  }
-  .home__cards {
+  .cards {
     padding: 10px 0 10px 0;
     border-radius: 10px;
   }
-  .home__cards article:hover {
+  .cards a:hover {
     scale: 1;
   }
 }
 @media screen and (max-width: 768px) {
-  .home__cards {
+  .cards {
     padding: 0;
     width: 100%;
     background: #ffffff;
@@ -137,9 +131,6 @@ a {
   }
 }
 .location {
-  margin: 0 100px 0 100px;
-}
-.location__section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -160,31 +151,25 @@ a {
   flex-direction: column;
   align-items: flex-end;
 }
-.location__toggles {
+
+.toggles {
   margin-top: 20px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.location__description {
+.toggles .collapse {
   width: 45%;
 }
-.location__equipements {
-  width: 45%;
-}
-.location .collapse__title {
+.toggles .collapse__title {
   font-size: 18px;
 }
-.location .collapse__description {
+.toggles .collapse__description {
   font-size: 18px;
 }
 
-@media screen and (max-width: 1024px) {
-  .location {
-    margin: 0 20px 0 20px;
-  }
-}
 @media screen and (max-width: 768px) {
-  .location__section {
+  .location {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -194,15 +179,12 @@ a {
     justify-content: space-between;
     align-items: center;
   }
-  .location__toggles {
+  .toggles {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
   }
-  .location__description {
-    width: 100%;
-  }
-  .location__equipements {
+  .toggles .collapse {
     width: 100%;
   }
 }
@@ -231,7 +213,7 @@ a {
   border-bottom: 2px solid #ff6060;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1050px) {
   .header {
     margin: 0 20px 0 20px;
   }
@@ -275,6 +257,7 @@ a {
 .banner {
   position: relative;
   margin: 20px 0 40px 0;
+  width: 100%;
   height: 220px;
   border-radius: 25px;
   background: #000000;
@@ -300,7 +283,7 @@ a {
   align-items: center;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1050px) {
   .banner {
     margin: 0 0 20px 0;
     border-radius: 10px;
@@ -346,7 +329,7 @@ a {
   color: #ffffff;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1050px) {
   .card {
     margin: 10px 0 10px 0;
     height: 255px;
@@ -372,6 +355,7 @@ a {
 }
 .collapse {
   margin-bottom: 30px;
+  width: 100%;
 }
 .collapse__button {
   padding: 15px;

@@ -8,17 +8,15 @@ function Slideshow({image}) {
   const imgback = () => {
     if (imgIndex === 0) {
       return setImgIndex(image.length - 1)
-    } else {
-      return setImgIndex(imgIndex - 1)
     }
+    return setImgIndex(imgIndex - 1)
   }
 
   const imgforward = () => {
     if (imgIndex === image.length - 1) {
       return setImgIndex(0)
-    } else {
-      return setImgIndex(imgIndex + 1)
     }
+    return setImgIndex(imgIndex + 1)
   }
 
   return (

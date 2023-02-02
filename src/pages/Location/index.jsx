@@ -13,34 +13,28 @@ function Location() {
 
   if (location === undefined) {
     return <Navigate replace to="/Error404" />
-  } else {
-    return (
-      <div className="location">
-        <div className="location__slideshow">
-          <Slideshow image={location.pictures} />
-        </div>
-        <section className="location__section">
-          <div className="location__text">
-            <h1 className="location__title">{location.title}</h1>
-            <p className="location__paragraph">{location.location}</p>
-            <Tag texte={location.tags} />
-          </div>
-          <div className="location__info">
-            <Profil texte={location.host.name} image={location.host.picture} />
-            <Notation note={location.rating} />
-          </div>
-        </section>
-        <div className="location__toggles">
-          <div className="location__description">
-            <Collapse title="Description" description={location.description} />
-          </div>
-          <div className="location__equipements">
-            <Collapse title="Équipements" description={location.equipments} />
-          </div>
-        </div>
-      </div>
-    )
   }
+
+  return (
+    <>
+      <Slideshow image={location.pictures} />
+      <section className="location">
+        <div className="location__text">
+          <h1 className="location__title">{location.title}</h1>
+          <p className="location__paragraph">{location.location}</p>
+          <Tag texte={location.tags} />
+        </div>
+        <div className="location__info">
+          <Profil texte={location.host.name} image={location.host.picture} />
+          <Notation note={location.rating} />
+        </div>
+      </section>
+      <section className="toggles">
+        <Collapse title="Description" description={location.description} />
+        <Collapse title="Équipements" description={location.equipments} />
+      </section>
+    </>
+  )
 }
 
 export default Location

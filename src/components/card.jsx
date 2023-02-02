@@ -1,16 +1,19 @@
 import React from "react"
+import {Link} from "react-router-dom"
 
-function Card({image, texte}) {
+function Card({data}) {
   return (
-    <div className="card">
-      <img
-        className="card__image"
-        src={image}
-        alt="Illustration de la localisation"
-      />
-      <div className="card__background"></div>
-      <h2 className="card__text">{texte}</h2>
-    </div>
+    <Link to={`/location/${data.id}`}>
+      <article className="card">
+        <img
+          className="card__image"
+          src={data.cover}
+          alt={`Illustration du logement ${data.title}`}
+        />
+        <div className="card__background"></div>
+        <h2 className="card__text">{data.title}</h2>
+      </article>
+    </Link>
   )
 }
 

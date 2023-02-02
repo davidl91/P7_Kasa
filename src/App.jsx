@@ -5,10 +5,13 @@ import Location from "./pages/Location"
 import Error from "./pages/Error"
 import Header from "./components/header"
 import Footer from "./components/footer"
+import React from "react"
+
+//  <React.Fragment>
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Router>
         <Header />
         <main className="container">
@@ -21,7 +24,7 @@ function App() {
         </main>
         <Footer />
       </Router>
-    </div>
+    </>
   )
 }
 

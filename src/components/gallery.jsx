@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import arrowback from "../assets/arrow-back.svg"
 import arrowforward from "../assets/arrow-forward.svg"
 
-function Slideshow({image}) {
+function Gallery({image}) {
   const [imgIndex, setImgIndex] = useState(0)
 
   const imgback = () => {
@@ -20,28 +20,28 @@ function Slideshow({image}) {
   }
 
   return (
-    <div className="slideshow">
+    <div className="gallery">
       {image.length > 1 && (
         <img
-          className="slideshow__back"
+          className="gallery__back"
           src={arrowback}
           alt="Fléche précedént"
           onClick={imgback}
         />
       )}
       <img
-        className="slideshow__image"
+        className="gallery__image"
         src={image[imgIndex]}
         alt="Illustration du logement"
       />
       {image.length > 1 && (
-        <span className="slideshow__index">
+        <span className="gallery__index">
           {imgIndex + 1}/{image.length}
         </span>
       )}
       {image.length > 1 && (
         <img
-          className="slideshow__forward"
+          className="gallery__forward"
           src={arrowforward}
           alt="Fléche suivant"
           onClick={imgforward}
@@ -51,4 +51,4 @@ function Slideshow({image}) {
   )
 }
 
-export default Slideshow
+export default Gallery

@@ -8,22 +8,12 @@ function Notation({note}) {
   return (
     <div className="notation">
       {stars.map((star) => {
-        if (note >= star) {
-          return (
-            <img
-              key={star}
-              className="notation__star"
-              src={starfull}
-              alt="Icone d'étoile plein"
-            />
-          )
-        }
         return (
           <img
             key={star}
             className="notation__star"
-            src={starempty}
-            alt="Icone d'étoile vide"
+            src={note >= star ? starfull : starempty}
+            alt="Icone d'étoile"
           />
         )
       })}

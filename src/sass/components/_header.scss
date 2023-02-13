@@ -11,6 +11,9 @@
     flex-direction: row;
     align-items: center;
   }
+  &__link.active {
+    border-bottom: 2px solid $color-primary;
+  }
   a {
     margin-left: 60px;
     text-decoration: none;

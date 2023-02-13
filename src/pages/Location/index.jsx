@@ -1,7 +1,7 @@
 import React from "react"
 import {useParams, Navigate} from "react-router-dom"
 import datas from "../../datas/logements.json"
-import Slideshow from "../../components/slideshow"
+import Gallery from "../../components/gallery"
 import Tag from "../../components/tag"
 import Profil from "../../components/profil"
 import Notation from "../../components/notation"
@@ -17,7 +17,7 @@ function Location() {
 
   return (
     <>
-      <Slideshow image={location.pictures} />
+      <Gallery image={location.pictures} />
       <section className="location">
         <div className="location__text">
           <h1 className="location__title">{location.title}</h1>

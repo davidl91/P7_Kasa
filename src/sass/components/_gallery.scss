@@ -1,4 +1,4 @@
-.slideshow {
+.gallery {
   position: relative;
   height: 415px;
   display: flex;
@@ -41,7 +41,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .slideshow {
+  .gallery {
     height: 255px;
     &__image {
       border-radius: 10px;
@@ -53,6 +53,9 @@
     &__forward {
       width: 50px;
       border-radius: 10px;
+    }
+    &__index {
+      display: none;
     }
   }
 }

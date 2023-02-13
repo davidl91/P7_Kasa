@@ -28,7 +28,7 @@ function Collapse({title, description}) {
               })}
             </ul>
           ) : (
-            description
+            <p>{description}</p>
           )}
         </div>
       )}
